@@ -1,3 +1,11 @@
+.benefits,
+.activity,
+.team,
+.button-list,
+.projects {
+  display: flex;
+}
+
 /* Секція героя */
 
 .section-hero {
@@ -41,7 +49,7 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  
+
   padding: 10px 32px;
   margin-top: 30px;
 }
@@ -100,6 +108,33 @@
 
 .activity {
   justify-content: space-between;
+}
+
+.activity-thumb {
+  position: relative;
+}
+
+.activity-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.activity-description p {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* Наша команда */
@@ -196,7 +231,9 @@
   line-height: 1.62;
   letter-spacing: 0.03em;
 
-  transition: background-color var(--animation-time) var(--animation-function), color var(--animation-time) var(--animation-function), box-shadow var(--animation-time) var(--animation-function);
+  transition: background-color var(--animation-time) var(--animation-function),
+    color var(--animation-time) var(--animation-function),
+    box-shadow var(--animation-time) var(--animation-function);
 }
 
 .button-portfolio:hover,
