@@ -14,6 +14,9 @@
 
   --border-color-header: #ececec;
   --border-color-project: #eeeeee;
+
+  --animation-time: 250ms;
+  --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -164,6 +167,8 @@ header,
   padding: 17px 0px;
   text-decoration: none;
   color: inherit;
+
+  transition: color var(--animation-time) var(--animation-function);
 }
 
 .header-nav li a:hover,
@@ -183,6 +188,8 @@ header,
   text-decoration: none;
   color: var(--grey-text);
   align-items: center;
+
+  transition: color var(--animation-time) var(--animation-function);
 }
 
 .header-contacts li:not(:last-child) {
@@ -204,6 +211,8 @@ header,
   justify-content: center;
   align-items: center;
   fill: var(--icon-color);
+
+  transition: background-color var(--animation-time) var(--animation-function), fill var(--animation-time) var(--animation-function);
 }
 
 .social-icon {
@@ -269,6 +278,34 @@ footer .container {
 .join .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--white);
+}
+
+/* BackDrop */
+
+.backdrop-service {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop-service.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-service {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
 }
 
 /* Додаткові стилі */
